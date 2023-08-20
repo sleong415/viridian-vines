@@ -1,0 +1,18 @@
+.products {
+    width: 100%;
+    padding: 2rem 4rem;
+}
+
+.products h3 {
+    color: var(--main-grey);
+    text-transform: none;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (max-width: 1070px) {
+    .products h3 {
+        padding: 0;
+        padding-bottom: 1rem;
+    }
+}

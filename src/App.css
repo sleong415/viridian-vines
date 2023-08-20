@@ -1,38 +1,27 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+
+:root {
+  /* --primary-green: #50A060;
+  --primary-yellow: #f8c58b; */
+  --primary-green: #495E57;
+  --primary-yellow: #f4dd69;
+
+  --main-white: #EDEFEE;
+  --main-black: #2f1e0a;
+  --main-grey: #8e8a88;
+
+  --main-spacing: 0.1rem;
+  --main-transition: all 0.2s linear; /* all - all properties affected */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  letter-spacing: var(--main-spacing);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  color: var(--main-black);
+  font-family: "Quicksand", sans-serif;
 }

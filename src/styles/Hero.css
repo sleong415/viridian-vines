@@ -1,0 +1,53 @@
+.hero {
+    min-height: calc(100vh - 60px);  /* 100% of view height - height of nav */
+    background: url("../../public/images/hero/hero_background.jpg") center/cover no-repeat; /* center and cover div - do not repeat if too small */
+    display: flex;  /* these 3 lines - centers the banner container */
+    align-items: center;
+    justify-content: center;
+}
+
+.banner {
+    text-align: center;
+    background: rgba(73, 94, 87, 0.95);
+    display: inline-block;  /* flex would put everything on one line */
+    padding: 3rem;
+}
+
+.banner-title {
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    color: var(--main-white);
+    letter-spacing: var(--main-spacing);
+    margin-bottom: 3rem;
+}
+
+.button {
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: var(--main-spacing);
+    font-size: 1rem;
+    background: var(--primary-yellow);
+    color: var(--main-black);
+    border: 1px solid var(--primary-yellow); /* for transition */
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+
+.button:hover {
+    background: transparent;
+    /* color: var(--main-white); */
+    color: var(--primary-yellow);
+
+}
+
+@media (max-width: 500px) {
+    .banner {
+        text-align: center;
+        width: 100%;
+        padding: 3rem 0;
+    }
+
+    .banner-title {
+        font-size: 3rem;
+    }
+}

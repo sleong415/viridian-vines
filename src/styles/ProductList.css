@@ -1,0 +1,33 @@
+.products-center {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
+}
+
+.product {
+    height: auto;
+    color: var(--main-black);
+    cursor: pointer;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.name-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    font-weight: 500;
+}
+
+h4 {
+    color: var
+}

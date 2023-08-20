@@ -1,0 +1,125 @@
+.wave svg{
+    display: block;
+}
+
+.footer-layout {
+    background: var(--primary-green);
+    display: flex;
+    justify-content: center;
+    padding: 0 3.1rem;
+    color: var(--main-white);
+    padding-bottom: 3rem;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1170px;
+    padding: 1rem 0;
+}
+
+.footer-center {
+    display: flex;
+    margin: 1rem 0;
+    justify-content: space-between;
+}
+
+.footer-left, .footer-right {
+    width: 50%;
+}
+
+.footer-links {
+    width: 100%;
+    display: flex;
+}
+
+.explore {
+    margin-right: 4rem;
+}
+
+.footer-left h2, h3 {
+    color: var(--primary-yellow);
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+
+}
+
+.footer-left a {
+    margin: 0.1rem 0;
+    font-size: 0.7rem;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-icon {
+    font-size: 1.3rem;
+    margin: 1rem 1rem 0 0;
+    cursor: pointer;
+}
+
+.footer-right h2 {
+    color: var(--primary-yellow);
+}
+
+.footer-right p {
+    font-size: 0.8rem;
+    margin: 1rem 0;
+}
+
+.email-input {
+    font-size: 0.7rem;
+    display: flex;
+}
+
+.sub-email {
+    flex: 1;
+    max-width: 200px;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid var(--main-white);
+    border-radius: 10px 0 0 10px;
+}
+
+.sub-email:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--main-white);
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.7rem;
+}
+
+.subscribe-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--main-white);
+    background-color: transparent;
+    border-radius: 0 10px 10px 0;
+    color: var(--main-white);
+
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+
+.subscribe-btn:hover {
+    background-color: var(--primary-yellow);
+    color: var(--main-black);
+    border: 1px solid var(--main-white);
+}
+
+@media (max-width: 650px) {
+    .footer-center {
+        flex-direction: column;
+    }
+
+    .footer-left, .footer-right {
+        width: 100%;
+    }
+
+    .footer-right {
+        margin-top: 2rem;
+    }
+}

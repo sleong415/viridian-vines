@@ -1,0 +1,57 @@
+{
+  "items": [
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "ZZ plant",
+        "scientific": "zamioculcas",
+        "price": 32.99,
+        "category": ["starter"],
+        "image": { "fields": { "file": { "url": "../images/plants/zzplant.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "dwarf banana tree",
+        "scientific": "musa dwarf cavendish",
+        "price": 49.99,
+        "category": ["pet-friendly"],
+        "image": { "fields": { "file": { "url": "../images/plants/dwarf-banana.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "3" },
+      "fields": {
+        "title": "snake plant",
+        "scientific": "dracaena trifasciata",
+        "price": 44.99,
+        "category": [
+          "starter",
+          "best-sellers"
+        ],
+        "image": { "fields": { "file": { "url": "../images/plants/snake-plant.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "4" },
+      "fields": {
+        "title": "monstera deliciosa",
+        "scientific": "monstera deliciosa",
+        "price": 62.99,
+        "category": ["best-sellers"],
+        "image": { "fields": { "file": { "url": "../images/plants/monstera.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "5" },
+      "fields": {
+        "title": "money tree",
+        "scientific": "pachira aquatica",
+        "price": 32.99,
+        "category": ["pet-friendly"],
+        "image": { "fields": { "file": { "url": "../images/plants/money-tree.jpg" } } }
+      }
+    }
+  ]
+}
