@@ -67,8 +67,8 @@
     height: auto;
     color: var(--main-black);
     cursor: pointer;
-    position: relative;
     overflow: hidden;
+    position: relative;
 }
 
 .image-container img {
@@ -98,13 +98,14 @@ h4 {
 /* --------------- Add Cart Button --------------- */
 .img-container {
     position: relative;
-    display: inline-block;
+    overflow: hidden;
 }
 
 .product-img {
     width: 100%;
-    height: auto;
-}
+    min-height: 12rem;
+    display: block;
+  }
 
 .bag-btn {
     position: absolute;
@@ -123,11 +124,11 @@ h4 {
     transition: var(--main-transition);
 }
 
-.bag-btn p {
-    margin-left: 0.7rem;
-    font-size: 1rem;
-}
-
 .product:hover .bag-btn {
     transform: translateX(0);
+}
+
+.product:hover .product-img {
+    opacity: 80%;
+    transition: var(--main-transition);
 }

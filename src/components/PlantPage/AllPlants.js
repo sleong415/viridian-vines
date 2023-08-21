@@ -1,6 +1,7 @@
 import '../../styles/PlantStyles/AllPlants.css';
-import CartIcon from '../CartIcon'
+// import CartIcon from '../CartIcon'
 import productsData from '../../products.json';
+import { useCart } from '../CartItemContext';
 import React, { useState, useEffect } from 'react';
 
 export default function AllPlants() {
@@ -8,6 +9,7 @@ export default function AllPlants() {
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [productsList, setProductsList] = useState([]);
     const [renderList, setRenderList] = useState([]);
+    const { addToCart, isItemInCart } = useCart();
 
     // filter change
     const handleChange = (e) => {
@@ -20,6 +22,22 @@ export default function AllPlants() {
         }
     }
 
+    const handleClick = (e) => {
+        const button = e.currentTarget;
+        const id = button.dataset.id;
+        // console.log(button);
+        // console.log(id);
+
+        button.innerText = "In Cart";
+        button.disabled = true;
+
+        let product = JSON.parse(localStorage.getItem('cachedProducts'));
+        product = product.find(item => item.id === id);
+        let newItem = {...product, amount: 1}
+        addToCart(newItem);
+    }
+
+    // alphabetize products
     function sortList(list) {
         list.sort((a, b) => a.title.localeCompare(b.title));
     }
@@ -120,11 +138,10 @@ export default function AllPlants() {
             </div>
             <div className="products-center">
                 {renderList.map((product) => (
-                        <div className='product' key={product.id}>
+                        <article className='product' key={product.id}>
                             <div className='image-container'>
                                 <img src={product.image} alt="" className='product-img'></img>
-                                <button className="bag-btn" data-id={product.id}>
-                                    <CartIcon className="product-cart-btn" iconColor={`var(--main-black)`} numberDisplay={false}/>
+                                <button className="bag-btn" data-id={product.id} onClick={handleClick}>
                                     <p>Add to cart</p>
                                 </button>
                             </div>
@@ -135,7 +152,7 @@ export default function AllPlants() {
                                 </div>
                                 <h4>{product.scientific}</h4>
                             </div>
-                        </div>
+                        </article>
                     ))
                 }
             </div>
