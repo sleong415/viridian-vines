@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import Cart from './Cart'
 import CartIcon from './CartIcon'
+import { useCart } from './CartItemContext';
 
 export default function Nav() {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
     const [showOverlay, setShowOverlay] = useState(false);
+    const { cartItems } = useCart();
 
     useEffect(() => {
         const checkScreenSize = () => {
@@ -46,7 +48,7 @@ export default function Nav() {
                             </>
                         )}
                     </div>
-                    <CartIcon func={handleCartClick} numberDisplay={true}/>
+                    <CartIcon func={handleCartClick} numberDisplay={true} items={cartItems.reduce((total, item) => total + item.amount, 0)}/>
                 </div>
             </div>
             <Cart className="cart-overlay" isOpen={showOverlay} onCloseCart={() => setShowOverlay(false)}/>

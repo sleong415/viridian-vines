@@ -1,5 +1,4 @@
 import '../../styles/PlantStyles/AllPlants.css';
-// import CartIcon from '../CartIcon'
 import productsData from '../../products.json';
 import { useCart } from '../CartItemContext';
 import React, { useState, useEffect } from 'react';
@@ -25,11 +24,6 @@ export default function AllPlants() {
     const handleClick = (e) => {
         const button = e.currentTarget;
         const id = button.dataset.id;
-        // console.log(button);
-        // console.log(id);
-
-        button.innerText = "In Cart";
-        button.disabled = true;
 
         let product = JSON.parse(localStorage.getItem('cachedProducts'));
         product = product.find(item => item.id === id);
@@ -141,14 +135,14 @@ export default function AllPlants() {
                         <article className='product' key={product.id}>
                             <div className='image-container'>
                                 <img src={product.image} alt="" className='product-img'></img>
-                                <button className="bag-btn" data-id={product.id} onClick={handleClick}>
-                                    <p>Add to cart</p>
+                                <button className="bag-btn" data-id={product.id} onClick={handleClick}  disabled={isItemInCart(product.id)}>
+                                    {isItemInCart(product.id) ? 'In Cart' : 'Add to Cart'}
                                 </button>
                             </div>
                             <div className="product-text">
                                 <div className="name-price">
-                                    <h2>{product.title}</h2>
-                                    <p className="price">{product.price}</p>
+                                    <h2 className='name'>{product.title}</h2>
+                                    <p className="price">${product.price}</p>
                                 </div>
                                 <h4>{product.scientific}</h4>
                             </div>

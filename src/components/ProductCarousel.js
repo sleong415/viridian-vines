@@ -51,8 +51,9 @@ export default function ProductCarousel() {
             const image = item.fields.image.fields.file.url;
             return {title, scientific, price, category, id, image};
         })
+
+        products = products.filter(item => item.category.includes("best-sellers"));
         setProductsList(products);
-        localStorage.setItem('cachedProducts', JSON.stringify(products));
     }, []);
 
     return (
@@ -66,7 +67,7 @@ export default function ProductCarousel() {
                             <div className="product-text">
                                 <div className="name-price">
                                     <h2>{product.title}</h2>
-                                    <p className="price">{product.price}</p>
+                                    <p className="price">${product.price}</p>
                                 </div>
                                 <h4>{product.scientific}</h4>
                             </div>

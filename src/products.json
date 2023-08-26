@@ -52,6 +52,58 @@
         "category": ["pet-friendly"],
         "image": { "fields": { "file": { "url": "../images/plants/money-tree.jpg" } } }
       }
+    },
+    {
+      "sys": { "id": "6" },
+      "fields": {
+        "title": "aloe vera",
+        "scientific": "aloe barbadensis miller",
+        "price": 29.99,
+        "category": [
+          "starter",
+          "best-sellers"
+        ],
+        "image": { "fields": { "file": { "url": "../images/plants/aloe-vera.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "7" },
+      "fields": {
+        "title": "golden pothos",
+        "scientific": "Epipremnum aureum",
+        "price": 24.99,
+        "category": [
+          "starter",
+          "best-sellers"
+        ],
+        "image": { "fields": { "file": { "url": "../images/plants/golden-pothos.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "8" },
+      "fields": {
+        "title": "moth orchid",
+        "scientific": "Phalaenopsis amabilis",
+        "price": 34.99,
+        "category": [
+          "best-sellers",
+          "pet-friendly"
+        ],
+        "image": { "fields": { "file": { "url": "../images/plants/moth-orchid.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "9" },
+      "fields": {
+        "title": "jade plant",
+        "scientific": "Crassula ovata",
+        "price": 19.99,
+        "category": [
+          "starter",
+          "best-sellers"
+        ],
+        "image": { "fields": { "file": { "url": "../images/plants/jade-plant.jpg" } } }
+      }
     }
   ]
 }
